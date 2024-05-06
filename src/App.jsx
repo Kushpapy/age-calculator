@@ -222,15 +222,15 @@ function App() {
       </ButtonContent>
       <OutputBox>
         <Output>
-          <Dashes>{age?.years || "- -"}</Dashes>
+          <Dashes>{age?.years ?? "- -"}</Dashes>
           <H1>years</H1>
         </Output>
         <Output>
-          <Dashes>{age?.months || "- -"}</Dashes>
+          <Dashes>{age?.months ?? "- -"}</Dashes>
           <H1>months</H1>
         </Output>
         <Output>
-          <Dashes>{age?.days || "- -"}</Dashes>
+          <Dashes>{age?.days ?? "- -"}</Dashes>
           <H1>days</H1>
         </Output>
       </OutputBox>
