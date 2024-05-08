@@ -62,6 +62,11 @@ const SvgBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s all ease-in;
+
+  &:hover {
+    background-color: var(--off-black);
+  }
 `;
 
 const ButtonContent = styled.div`
@@ -223,15 +228,15 @@ function App() {
       <OutputBox>
         <Output>
           <Dashes>{age?.years ?? "- -"}</Dashes>
-          <H1>years</H1>
+          <H1>{age?.years > 1 ? "years" : "year"}</H1>
         </Output>
         <Output>
           <Dashes>{age?.months ?? "- -"}</Dashes>
-          <H1>months</H1>
+          <H1>{age?.months > 1 ? "months" : "month"}</H1>
         </Output>
         <Output>
           <Dashes>{age?.days ?? "- -"}</Dashes>
-          <H1>days</H1>
+          <H1>{age?.days ? "days" : "day"}</H1>
         </Output>
       </OutputBox>
     </StyledContainer>
